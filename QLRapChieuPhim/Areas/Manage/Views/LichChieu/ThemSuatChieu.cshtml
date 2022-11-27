@@ -1,0 +1,72 @@
+﻿@model SuatChieuModel.Output.ThemSuatChieu
+@{
+    ViewData["Title"] = "Thêm suất chiếu";
+}
+<style>
+    div#dialog-message p {
+        margin: 0;
+    }
+</style>
+<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+    <div class="suatchieu">
+        <h2 class="page-heading">Thêm suất chiếu mới</h2>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="TenSuatChieu" class="col-sm-5 col-md-3">Tên suất chiếu</label>
+                <div class="col-sm-9 col-md-9">
+                    <input asp-for="TenSuatChieu" class="form-control" />
+                    <span asp-validation-for="TenSuatChieu" class="text-danger"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label asp-for="GioBatDau" class="col-sm-5 col-md-3">Giờ bắt đầu <span style="font-style: italic;">(hh:mm)</span></label>
+                <div class="col-sm-4 col-md-3">
+                    <input asp-for="GioBatDau" class="form-control" />
+                    <span asp-validation-for="GioBatDau" class="text-danger"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label asp-for="GioKetThuc" class="col-sm-5 col-md-3">Giờ kết thúc <span style="font-style: italic;">(hh:mm)</span></label>
+                <div class="col-sm-4 col-md-3">
+                    <input asp-for="GioKetThuc" class="form-control" />
+                    <span asp-validation-for="GioKetThuc" class="text-danger"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i> Lưu thông tin</button>
+                <a asp-area="Manage" asp-controller="LichChieu" asp-action="DanhSachSuatChieu" class="btn btn-info"><i class="fa fa-arrow-circle-o-left"></i> Quay lại</a>
+            </div>
+            <div asp-validation-summary="All" class="col-sm-offset-2 col-sm-8 text-danger font-weight-bold"></div>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+
+</div>
+@if (!string.IsNullOrEmpty(Model.ThongBao))
+{
+    <div id="dialog-message" title="Thông báo">
+        <div style="margin: 10px 0;">
+            @Html.Raw(Model.ThongBao)
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#dialog-message").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+   
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

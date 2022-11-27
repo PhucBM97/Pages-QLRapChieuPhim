@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLRapChieuPhim", "QLRapChieuPhim\QLRapChieuPhim.csproj", "{A141DE99-9757-405B-BB76-59D2E3B5C2F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A141DE99-9757-405B-BB76-59D2E3B5C2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A141DE99-9757-405B-BB76-59D2E3B5C2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A141DE99-9757-405B-BB76-59D2E3B5C2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A141DE99-9757-405B-BB76-59D2E3B5C2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABCABF14-A58C-48C3-936C-E9D2EDB9BDF9}
+	EndGlobalSection
+EndGlobal
