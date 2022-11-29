@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace QLRapChieuPhim.Areas.Manage.Controllers
 {
     [Area("Manage")]
-    [Authorize("QuanTri", "NhanVien")]
+    //[Authorize("QuanTri", "NhanVien")]
     public class HomeController : Controller
     {
         public IActionResult Index()
